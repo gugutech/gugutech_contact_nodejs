@@ -33,7 +33,7 @@ app.use(session({
     }),
     resave: false,
     saveUninitialized: true,
-    secret: 'keyboard cat'
+    secret: 'gugutech'
 
 }));
 
