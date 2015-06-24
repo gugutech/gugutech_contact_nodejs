@@ -1,0 +1,19 @@
+{
+    "company": "gugutech",
+    "project": "contact",
+    "cour_member_list": [
+        "Fan Zhihong",
+        "Li Bo",
+        "Ouyang Chenxing",
+        "Ruan conghe",
+        "Lu Liang"
+    ],
+    "core_member_count": 5,
+    "techs": {
+        "app": "Swift2",
+        "UI": "Semantic UI",
+        "frontend": "nodejs",
+        "backend": "sprinmvc"
+    }
+
+}
