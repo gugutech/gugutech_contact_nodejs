@@ -1,5 +1,5 @@
 # gugutech_campus_nodejs
-frontend framework of gugutech campus project with nodejs, expresses and etc.
+frontend framework of gugutech contact project with nodejs, expresses and etc.
 
 ###initial framework build
 * build express framework
