@@ -9,6 +9,7 @@ var redisStore = require('connect-redis')(session);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var gugutech = require('./routes/gugutech');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/gugutech',gugutech);
 
 app.use('/testCookie', function(req, res, next) {
     if (req.cookies.isVisit) {
@@ -64,6 +66,8 @@ app.use('/redisses', function(req, res, next) {
         res.send('欢迎第一次来这里');
     }
 });
+
+
 
 
 

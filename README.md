@@ -1,5 +1,5 @@
-# gugutech_campus_nodejs
-frontend framework of gugutech campus project with nodejs, expresses and etc.
+# gugutech_contact_nodejs
+frontend framework of gugutech contact project with nodejs, expresses and etc.
 
 ###initial framework build
 * build express framework
@@ -11,4 +11,12 @@ npm intall
 * install basic module
 ```
 npm install hiredis redis express-session connect-redis --save
+```
+*isntall crypto module and gugutech api add
+```
+npm install crypto --save
+
+API: /gugutech   
+    GET: test json response
+    POST: test get parameters from request
 ```
