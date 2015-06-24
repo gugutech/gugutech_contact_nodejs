@@ -1,4 +1,4 @@
-# gugutech_campus_nodejs
+# gugutech_contact_nodejs
 frontend framework of gugutech contact project with nodejs, expresses and etc.
 
 ###initial framework build
@@ -18,5 +18,5 @@ npm install crypto --save
 
 API: /gugutech   
     GET: test json response
-    POST: test get parameter from request
+    POST: test get parameters from request
 ```
