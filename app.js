@@ -6,10 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var redisStore = require('connect-redis')(session);
+var seajs = require('seajs');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var gugutech = require('./routes/gugutech');
+
+
+
 
 var app = express();
 
@@ -65,6 +70,22 @@ app.use('/redisses', function(req, res, next) {
         req.session.isVisit = 1;
         res.send('欢迎第一次来这里');
     }
+});
+
+
+/**
+ *
+ * seajs combine into node
+ * 
+ */
+
+app.use('/seajstest', function(req, res, next){
+    var seajs_demo = require('./routes/seajs_demo');
+    var name = seajs_demo.name;
+
+    seajs_demo.test_seajs();
+
+    res.send('<h1>'+name+'</h1><p>test success!</p>');
 });
 
 
