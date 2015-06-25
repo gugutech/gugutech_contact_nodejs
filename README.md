@@ -12,7 +12,7 @@ npm intall
 ```
 npm install hiredis redis express-session connect-redis --save
 ```
-*isntall crypto module and gugutech api add
+*install crypto module and gugutech api add
 ```
 npm install crypto --save
 
@@ -20,3 +20,9 @@ API: /gugutech
     GET: test json response
     POST: test get parameters from request
 ```
+
+###seajs implement 
+```
+/seajstest is used to test seajs module works properly
+```
+
