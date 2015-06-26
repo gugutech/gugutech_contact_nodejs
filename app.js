@@ -91,7 +91,7 @@ app.use('/seajstest', function(req, res, next) {
     var seajs_demo = require('./routes/seajs_demo');
     var name = seajs_demo.name;
 
-    seajs_demo.test_seajs();
+    // seajs_demo.test_seajs();
 
     res.send('<h1>' + name + '</h1><p>test success!</p>');
 });

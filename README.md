@@ -21,10 +21,53 @@ API: /gugutech
     POST: test get parameters from request
 ```
 
-###seajs implement 
+###Seajs Implement 
 ```
 /seajstest is used to test seajs module works properly
 
-Reference brief CMD standard: https://github.com/seajs/seajs/issues/242
+Reference brief CMD standard: https://github.com/seajs/seajs/issues/242ter
 ```
+
+###Gulp (stream build system) Implement
+```Bash
+npm install -g gulp
+
+cd <YOUR_PROJECT>
+npm install gulp --save-dev
+npm install gulp-jshint --save-dev
+npm install gulp-concat --save-dev
+npm install gulp-uglify --save-dev
+```
+
+### Nodejs Project with Supervisor (Hot Deployment)
+* install supervisor
+```
+npm install -g supervisor
+```
+* change 'package.json' file:
+```
+add 
+
+"test": "supervisor ./bin/www"
+
+in 
+
+"scripts": {
+    "start": "node ./bin/www"
+} 
+```
+* start node
+```
+npm test
+```
+
+then you can deploy your code without restarting node :)
+
+
+
+
+
+
+ 
+
 
