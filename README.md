@@ -3,7 +3,7 @@ frontend framework of gugutech contact project with nodejs, expresses and etc.
 
 ###initial framework build
 * build express framework
-```
+```Bash
 express gugutech_campus_nodejs
 cd gugutech_campus_nodejs
 npm intall
