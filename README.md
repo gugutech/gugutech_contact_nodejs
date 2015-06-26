@@ -39,7 +39,35 @@ npm install gulp-concat --save-dev
 npm install gulp-uglify --save-dev
 ```
 
+### Nodejs Project with Supervisor (Hot Deployment)
+* install supervisor
+```
+npm install -g supervisor
+```
+* change 'package.json' file:
+```
+add 
+
+"test": "supervisor ./bin/www"
+
+in 
+
+"scripts": {
+    "start": "node ./bin/www"
+} 
+```
+* start node
+```
+npm test
+```
+
+then you can deploy your code without restarting node :)
 
 
+
+
+
+
+ 
 
 
