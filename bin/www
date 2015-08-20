@@ -42,12 +42,12 @@ var chat = io
           console.log('one user connect');
 
           socket.emit('message from 3000',{
-            data: 'data from 3000',
+            data: 'data from 3000 socket',
             me: 'libo'
           });
 
           chat.emit('message from 3000 chat',{
-            data: 'data from 3000',
+            data: 'data from 3000 chat',
             me: 'libo'
           });
 

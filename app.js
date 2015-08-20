@@ -111,12 +111,12 @@ var chat = io
           console.log('one user connect to port 3333');
 
           socket.emit('message from 3333',{
-            data: 'data from 3333',
+            data: 'data from 3333 socket',
             me: 'libo'
           });
 
           chat.emit('message from 3333 chat',{
-            data: 'data from 3333',
+            data: 'data from 3333 chat',
             me: 'libo'
           });
 
