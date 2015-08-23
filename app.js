@@ -84,24 +84,24 @@ app.use('/seajstest', function(req, res, next) {
  * Socket.io usage
  * --listen different port
  */
-var io = require('socket.io').listen(3333);
-var chat = io
-        .of('/socket')
-        .on('connection',function(socket){
+// var io = require('socket.io').listen(3333);
+// var chat = io
+//         .of('/socket')
+//         .on('connection',function(socket){
 
-          console.log('one user connect to port 3333');
+//           console.log('one user connect to port 3333');
 
-          socket.emit('message from 3333',{
-            data: 'data from 3333 socket',
-            me: 'libo'
-          });
+//           socket.emit('message from 3333',{
+//             data: 'data from 3333 socket',
+//             me: 'libo'
+//           });
 
-          chat.emit('message from 3333 chat',{
-            data: 'data from 3333 chat',
-            me: 'libo'
-          });
+//           chat.emit('message from 3333 chat',{
+//             data: 'data from 3333 chat',
+//             me: 'libo'
+//           });
 
-        });
+//         });
 
 
 // catch 404 and forward to error handler
