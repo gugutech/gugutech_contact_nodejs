@@ -64,6 +64,18 @@ npm test
 then you can deploy your code without restarting node :)
 
 
+### Middleware demo (authCheck)
+    url /demo/middleware
+* routes/demo.js
+```
+    add middleware.
+```
+* service/util/auch.js
+```
+    middleware. 
+    Check token exist and equal to 'gugutech', then go next()
+    Or just return error message directly.
+```
 
 
 

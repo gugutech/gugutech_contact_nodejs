@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+    <script>
+    var socket = io.connect('http://localhost:3000/socket');
+    socket.on("message from 3000 chat", function(data) {
+        console.log(data);
+        socket.emit("otherEvent", {
+            my: "data"
+        });
+    });
+
+    setTimeout(function() {
+        var socket1 = io.connect('http://localhost:3333/socket');
+        socket1.on("message from 3333 chat", function(data) {
+            console.log(data);
+            socket.emit("otherEvent", {
+                my: "data 3333"
+            });
+        });
+    }, 5000);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

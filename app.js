@@ -12,6 +12,7 @@ var seajs = require('seajs');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var gugutech = require('./routes/gugutech');
+var demo = require('./routes/demo');
 
 
 
@@ -45,34 +46,15 @@ app.use(session({
 
 }));
 
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/gugutech', gugutech);
+app.use('/demo', demo);
 
-app.use('/testCookie', function(req, res, next) {
-    if (req.cookies.isVisit) {
-        console.log(req.cookies);
-        res.send("再次欢迎访问");
-    } else {
-        res.cookie('isVisit', 1, {
-            maxAge: 60 * 1000
-        });
-        res.send("欢迎第一次访问");
-    }
-});
 
-app.use('/redisses', function(req, res, next) {
-    console.log(req);
-    if (req.session.isVisit) {
-        req.session.isVisit++;
-        res.send('<p>第 ' + req.session.isVisit + '次来到此页面</p>');
-    } else {
-        req.session.isVisit = 1;
-        res.send('欢迎第一次来这里');
-    }
-});
 
 
 /**
@@ -97,7 +79,29 @@ app.use('/seajstest', function(req, res, next) {
 });
 
 
+/**
+ *
+ * Socket.io usage
+ * --listen different port
+ */
+var io = require('socket.io').listen(3333);
+var chat = io
+        .of('/socket')
+        .on('connection',function(socket){
 
+          console.log('one user connect to port 3333');
+
+          socket.emit('message from 3333',{
+            data: 'data from 3333 socket',
+            me: 'libo'
+          });
+
+          chat.emit('message from 3333 chat',{
+            data: 'data from 3333 chat',
+            me: 'libo'
+          });
+
+        });
 
 
 // catch 404 and forward to error handler
